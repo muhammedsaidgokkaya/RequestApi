@@ -1,0 +1,25 @@
+﻿@model List<User>
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<table>
+    <tr>
+        <th>#</th>
+        <th>Ad</th>
+        <th>Soyad</th>
+        <th>Mail</th>
+        <th>Tel</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>@item.Id</td>
+            <td>@item.FirstName</td>
+            <td>@item.LastName</td>
+            <td>@item.Mail</td>
+            <td>@item.Number</td>
+        </tr>
+    }
+</table>
